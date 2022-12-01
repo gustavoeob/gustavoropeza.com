@@ -1,0 +1,234 @@
+@import "../../../styles/scss/variables";
+
+
+
+.navbar {
+  width: 100%;
+  height: 122px;
+  font-size: $fs-item-dk;
+  a {
+    color: #fff;
+  }
+  .appbar-container {
+    margin: 0 auto;
+    padding: 91px 133px 0;
+    .navbar-toggler.collapsed{
+      background-image: url("../../../assets/icons/menu-icon.svg");
+      background-repeat: no-repeat;
+    }
+    .navbar-toggler {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width:30px;
+      height: 30px;
+      border: none;
+      background-image: url("../../../assets/icons/close-menu-icon.svg");
+      background-size:28px;
+      background-repeat: no-repeat;
+      
+      .navbar-toggler-icon {
+        visibility: hidden;
+      }
+    }
+  }
+  .me-auto {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 1px 1px 20px #00000060;
+    padding: 0.8em 0;
+    .appbar-container-one {
+      width: 144px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      button{
+        width: 35px;
+      }
+      .theme-icon {
+        width: 30px;
+      }
+    }
+    .appbar-container-two {
+      width: 350px;
+      height: 58px;
+      background-color: $white-md;
+      border-radius: 24px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      navlink-button {
+        a:hover {
+          color: #fff;
+        }
+      }
+    }
+    .appbar-container-three {
+      width: 144px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      a {
+        svg {
+          width: 38px;
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+
+button {
+  position: relative;
+  border: none;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 3px;
+  border: 3px solid transparent;
+  width: 85px;
+}
+button:active {
+  transform: translateY(3px);
+}
+button::after,
+button::before {
+  border-radius: 3px;
+}
+
+.navlink {
+  background-color: transparent;
+  color: #1b1b20;
+  border: none;
+  overflow: hidden;
+  box-shadow: none;
+  width: 85px;
+}
+.navlink:hover {
+  color: #ffffff;
+}
+.navlink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s, border 0.3s;
+}
+.navlink:hover::before {
+  opacity: 0;
+}
+.navlink::after {
+  content: "";
+  position: absolute;
+  top: 62px;
+  left: 0px;
+  width: 100px;
+  height: 45px;
+  background-color: $text-color;
+  border-color: transparent;
+  border-radius: 30px;
+  transform: translate(-10px, -70px) scale(0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.navlink:hover::after {
+  opacity: 1;
+  transform-origin: 50px 150px;
+  transform: scale(1) translate(-10px, -70px);
+}
+@media (max-width: 1158px) {
+  .navbar {
+    width: 100%;
+    height: 122px;
+    font-size: $fs-item-dk;
+    a {
+      color: #fff;
+    }
+    .appbar-container {
+      margin: 0 auto;
+      padding: 0;
+    }
+    .me-auto {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-shadow: 1px 1px 20px #00000060;
+      .appbar-container-one {
+        display: flex;
+        gap: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .navbar {
+    width: 100%;
+    height: 122px;
+    font-size: $fs-item-dk;
+    a {
+      color: #fff;
+    }
+    .appbar-container {
+      margin: 0 auto;
+      padding: 0;
+    }
+    .me-auto {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-shadow: 1px 1px 20px #00000060;
+      .appbar-container-one {
+        display: flex;
+        gap: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 540px) {
+  .navbar {
+    height: 110px;
+    a {
+      color: #fff;
+    }
+    .appbar-container {
+      margin: 0 auto;
+      padding: 0;
+      height: 5px;
+    
+      .navbar-collapse.collapse.show{
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(50%-50%);
+      }
+    }
+    .me-auto {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-shadow: 1px 1px 20px #00000060;
+      scale: 0.75;
+      gap: 10px;
+      margin-top: 20px;
+      .appbar-container-one {
+        display: flex;
+        gap: 0px;
+      }
+      .appbar-container-two {
+        height: 55px;
+        font-size: 1.2em;
+      }
+    }
+  }
+  .navlink::after{
+    top: 65px;
+  }
+}

@@ -1,0 +1,102 @@
+@import "../../../../styles/scss/variables";
+
+
+.skill-container {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $white-md;
+  border-radius: $br-soft;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 1px $white-qr;
+  margin: 0px;
+  .skill-name {
+    font-size: $fs-big-text-dk;
+    padding: 2px 0 8px;
+  }
+  .skill-image {
+    width: fit-content;
+    padding: 5px;
+    background-color: $white-md;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .skill-container{
+    width: 160px;
+    height: 160px;
+    margin: 4px;
+    .skill-name{
+      font-size: calc($fs-item-dk + .1vw);
+    }
+    .skill-image{
+      width: calc(80px + .5vw );
+    }
+  }
+}
+@media (max-width: 1158px) {
+  .skill-container{
+    width: 160px;
+    height: 160px;
+    margin: 15px;
+    .skill-name{
+      font-size: calc($fs-item-dk + .1vw);
+    }
+    .skill-image{
+      width: calc(80px + .5vw );
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .skill-container{
+    width: 160px;
+    height: 160px;
+    margin: 15px;
+
+    .skill-name{
+      font-size: calc($fs-item-dk + .1vw);
+    }
+    .skill-image{
+      width: calc(80px + .5vw );
+    }
+  }
+}
+@media (max-width: 875px) {
+  .skill-container{
+    width: 140px;
+    height: 140px;
+    margin: 12px 5%;
+
+    .skill-name{
+      font-size: calc($fs-text-dk + .1vw);
+    }
+    .skill-image{
+      width: calc(70px + .5vw );
+    }
+  }
+}
+@media (max-width: 540px) {
+  .skill-container{
+    width: 100%;
+    height: 50px;
+    margin: 0px 5%;
+    display:flex;
+    border-radius:$br-sharp;
+    .skill-name{
+      font-size: calc($fs-text-dk + .1vw);
+      position: relative;
+      top: 22.5px;
+    }
+    .skill-image{
+      position: relative;
+      top: -17.5px;
+      left: -85px;
+      width: calc(35px + .5vw );
+      text-align: start;
+    }
+  }
+}

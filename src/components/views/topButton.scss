@@ -1,0 +1,40 @@
+.scroll-up-container {
+    width: 100%;
+    position: fixed;
+    top: 90%;
+    right: 5%;
+    color: white;
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease;
+    align-items: flex-end;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    a {
+      color: #fff;
+    }
+    .arrow-circle-up {
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      transform: rotate(270deg);
+    }
+    .scroll-up-container-vanished {
+      display: none;
+      .scroll-up {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .arrow-circle-up {
+          justify-content: center;
+          align-items: center;
+          width: 35px;
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }

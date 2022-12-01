@@ -1,0 +1,11 @@
+.background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    filter: opacity(0.9) contrast(1.2) brightness(0.8);
+    position: fixed;
+    background-color: rgba(231, 188, 35, 0.803);
+    background: rgb(26,21,106);
+background: linear-gradient(180deg, rgba(26,21,106,1) 0%, #111d59 0%, rgba(132,147,227,1) 49%, rgba(194,222,241,1) 100%);
+  }

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../../fonts/TTHoves/TTHoves-DemiBold.ttf");
+}
+
+@font-face {
+  font-family: jost-regular;
+  src: url("../../fonts/Jost/Jost Regular 400.ttf");
+}
+
+@font-face {
+  font-family: jost-medium;
+  src: url("../../fonts//Jost/Jost Medium 500.ttf");
+}
+
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: jost-regular;
+}
+
+body a,
+html a,
+* a {
+  text-decoration: none;
+}
+
+body a:hover,
+html a:hover,
+* a:hover {
+  color: #ffffff;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  margin: 0 !important;
+  padding: 0;
+}
+/*# sourceMappingURL=main.css.map */
