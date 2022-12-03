@@ -8,7 +8,7 @@
   position: fixed;
   background: $bg-light;
   transition: all 1.5s ease;
-  animation: lightTransition .175s alternate;
+  animation: lightTransition 0.5s;
 }
 .dark-background {
   width: 100%;
@@ -17,7 +17,7 @@
   object-fit: cover;
   position: fixed;
   background: $bg-dark;
-  animation: darkTransition .175s alternate;
+  animation: darkTransition 0.5s;
 }
 
 @keyframes lightTransition {
@@ -39,5 +39,4 @@
     opacity: 1;
     transform: translateY(0%);
   }
-
 }
