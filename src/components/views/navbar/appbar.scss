@@ -57,15 +57,43 @@
         width:100%;
         text-align: start;
       }
+      .language-container-es{
+        display: flex;
+        gap: 12px;
+        justify-content:center;
+        align-items: center;
+        font-size: 21px;
+      }
+      .language-container-en{
+        font-size:19px;
+        display: flex;
+        gap: 12px;
+        justify-content:center;
+        align-items: center;
+      }
+      .language-flag{
+        width: 24px;
+        height: 24px;
+      }
       .dropdown-menu.show{
         background-color: $white-md;
       }
       button{
         width: 35px;
       }
-      .theme-icon {
-        width: 30px;
+      .light-icon {
+        width: 28px;
+        transition: all 0.5s ease;
+        animation:lightTransition 0.275s all;
       }
+      .dark-icon {
+        width: 28px;
+        position: relative;
+        left: -4px;
+        transition: all 0.5s ease;
+        animation:darkTransition 0.275s all;
+      }
+
     }
     .appbar-container-two {
       width: 420px;
@@ -214,6 +242,9 @@ button::before {
       .appbar-container-one {
         display: flex;
         gap: 15px;
+      }
+      .appbar-container-two {
+        margin: 5px 0;
       }
     }
   }

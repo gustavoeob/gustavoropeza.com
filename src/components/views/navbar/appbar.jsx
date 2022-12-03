@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import LightModeIcon from "../../../assets/icons/sun.svg";
 import "./appbar.scss";
 import { Linkedin } from "../../../assets/logo/linkedin";
 import { Github } from "../../../assets/logo/github";
@@ -11,8 +10,9 @@ import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../../context/ThemeContext";
 
 const Appbar = () => {
-  const {changeTheme} = useContext(ThemeContext)
-
+  const {changeTheme, theme} = useContext(ThemeContext);
+  const LightModeIcon = "https://firebasestorage.googleapis.com/v0/b/portfolio-ff6da.appspot.com/o/icons%2Fsun.svg?alt=media&token=db9e269d-d169-46ab-bc07-6a61b89b02a7"
+  const DarkModeIcon = "https://firebasestorage.googleapis.com/v0/b/portfolio-ff6da.appspot.com/o/icons%2Fmoon.svg?alt=media&token=0c998bbd-0681-4cfb-80da-6a2cc0374c37"
   const EnglishFlag = "https://cdn-icons-png.flaticon.com/512/299/299688.png";
   const SpanishFlag = "https://cdn-icons-png.flaticon.com/512/299/299820.png";
 
@@ -37,7 +37,7 @@ const Appbar = () => {
                     onClick={() => {
                       i18n.changeLanguage("en");
                       setLangSelection(
-                        <a className="language-container">
+                        <a className="language-container-en">
                           EN
                           <img
                             src={EnglishFlag}
@@ -48,7 +48,7 @@ const Appbar = () => {
                       );
                     }}
                   >
-                    <a className="language-container">
+                    <a className="language-container-en">
                       EN
                       <img
                         src={EnglishFlag}
@@ -64,7 +64,7 @@ const Appbar = () => {
                     onClick={() => {
                       i18n.changeLanguage("es");
                       setLangSelection(
-                        <a className="language-container">
+                        <a className="language-container-es">
                           ES
                           <img
                             src={SpanishFlag}
@@ -76,7 +76,7 @@ const Appbar = () => {
                     }}
                   >
                                           
-                        <a className="language-container">
+                        <a className="language-container-es">
                           ES
                           <img
                             src={SpanishFlag}
@@ -89,9 +89,10 @@ const Appbar = () => {
               </NavDropdown>
               <button onClick={changeTheme}>
                 <img
-                  src={LightModeIcon}
+                  src={ theme === "light" ? DarkModeIcon 
+                : LightModeIcon }
                   alt="light mode sun icon"
-                  className="theme-icon light-mode-icon"
+                  className={`${theme}-icon`}
                 />
               </button>
             </div>
