@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./hero.scss";
-import CV from "../../../../assets/images/white-english-CV.png";
 import arrowDown from "../../../../assets/icons/arrow-circle.svg";
 import HeroIllustration from "../../../../assets/illustrations/programmer-navy.png";
 
 const Hero = () => {
+  const [t] = useTranslation("global");
   const [vanish, setVanish] = useState(false);
 
   const vanishBtn = () => {
@@ -22,7 +23,7 @@ const Hero = () => {
       <div className="me-cv-container">
         <div className="me-container">
           <h1>Gustavo Oropeza</h1>
-          <h2>Front-end Developer</h2>
+          <h2>{t("me-container.occupation")}</h2>
         </div>
       </div>
       <img
@@ -32,16 +33,15 @@ const Hero = () => {
       />
       <div className="about-me-container">
         <div className="about-me">
-          <p>
-            I'm a motivated front-end developer and UX design enthusiast, I like
-            to transform ideas into designs that are user friendly, dinamic and
-            scalable at once.
-
-          </p>
-            <p>Scan QR Code to know more about me.</p> 
+          <p>{t("about-me.description")}</p>
+          <p> {t("about-me.action")}</p>
         </div>
-        <a href="https://cdn.me-qr.com/pdf/10971974.pdf" target="_blank" rel="noreferrer">
-          <img src={CV} alt="qr code cv" className="qr-code" />
+        <a
+          href={t("qr.link")}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={t("qr.code")} alt="qr code cv" className="qr-code" />
         </a>
       </div>
       <div
@@ -51,8 +51,8 @@ const Hero = () => {
         id="skills"
       >
         <a href="#skills">
-          <span className="scroll-down-text">scroll down</span>
-          <span className="swipe-up-text">swipe up</span>
+          <span className="scroll-down-text">{t("go-down.desktop-text")}</span>
+          <span className="swipe-up-text">{t("go-down.mobile-text")}</span>
         </a>
         <a href="#skills">
           <img

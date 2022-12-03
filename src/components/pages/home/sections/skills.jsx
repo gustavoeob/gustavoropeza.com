@@ -1,7 +1,9 @@
 import Skill from "./skill";
 import "./skills.scss";
+import { useTranslation } from "react-i18next";
 
-const Skills = (technology) => {
+const Skills = () => {
+  const [t] = useTranslation("global");
   const technologies = [
     {
       id: 1,
@@ -49,7 +51,7 @@ const Skills = (technology) => {
   return (
     <section>
       <div className="main-container skills-container">
-        <h2 className="section-title">skills</h2>
+        <h2 className="section-title">{t("appbar.skills")}</h2>
         <div className="all-skills">
           {technologies.map((item, index) => (
             <Skill key={index} name={item.name} img={item.img} />

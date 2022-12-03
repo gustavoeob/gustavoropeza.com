@@ -2,8 +2,12 @@ import React, { useRef} from "react";
 import "./contact.scss";
 import Arrow from "../../../../assets/icons/arrow.svg";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+
+  const [t] = useTranslation("global"); 
+
   const form = useRef();
   const userName = useRef();
   const userSurname = useRef();
@@ -37,7 +41,7 @@ const Contact = () => {
   return (
     <section className="main-container contact-container" id="contact">
       <div className="contact-box">
-        <h2 className="section-title">contact</h2>
+        <h2 className="section-title">{t("appbar.contact")}</h2>
         <div className="contact-layout">
           <form
             action="submit"
@@ -49,7 +53,7 @@ const Contact = () => {
             <input
               required
               type="text"
-              placeholder="name*"
+              placeholder={t("placeholder.name")}
               className="name-input"
               id="from_name"
               name="user_name"
@@ -58,7 +62,7 @@ const Contact = () => {
             <input
               required
               type="text"
-              placeholder="surname*"
+              placeholder={t("placeholder.surname")}
               className="surname-input"
               id="from_surname"
               name="user_surname"
@@ -68,7 +72,7 @@ const Contact = () => {
             <input
               required
               type="email"
-              placeholder="email*"
+              placeholder={t("placeholder.email")}
               className="email-input"
               id="email_id"
               name="user_email"
@@ -77,7 +81,7 @@ const Contact = () => {
             />
             <textarea
               type="text"
-              placeholder="leave a message"
+              placeholder={t("placeholder.message")}
               className="message-input"
               id="message"
               name="message"
@@ -90,12 +94,12 @@ const Contact = () => {
               id="button"
               value="send"
             >
-              send{" "}
+              {t("send.text")}
               <img src={Arrow} alt="send icon arrow" className="arrow-icon" />{" "}
             </button>
           </form>
           <div className="contact-right-container">
-            <h2>feel free to email me at:</h2>
+            <h2>{t("contact.text")}</h2>
             <div className="email-link-container">
               <a
                 href="mailto:gustavoeliasoropezabaez@gmail.com"

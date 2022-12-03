@@ -5,11 +5,13 @@ import TopButton from '../../views/topButton'
 import Skills from './sections/skills'
 import Projects from './sections/projects'
 import Contact from './sections/contact'
+import { ThemeContext } from "../../../context/ThemeContext";
+import { useContext } from "react";
 
 const Home = () => {
-
+  const {theme}  = useContext(ThemeContext);
   return (
-    <main>
+    <main className={theme}>
       <Background />
       <Hero />
       <Skills />

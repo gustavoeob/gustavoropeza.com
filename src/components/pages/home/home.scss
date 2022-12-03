@@ -2,3 +2,12 @@
   width: 100%;
   height: 100%;
 }
+main {
+  background:#121e5b;
+}
+.light{
+  filter: none;
+}
+.dark{
+  filter: brightness(.65);
+}

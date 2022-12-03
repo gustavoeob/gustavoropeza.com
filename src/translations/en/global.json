@@ -1,0 +1,41 @@
+{
+  "appbar": {
+    "skills": "skills",
+    "projects": "projects",
+    "contact": "contact"
+  },
+  "me-container": {
+    "occupation": "Front-end developer"
+  },
+  "about-me": {
+    "description": "I'm a motivated front-end developer and UX design enthusiast, I like to transform ideas into designs that are user friendly, dinamic and scalable at once.",
+    "action": "Scan QR Code to know more about me."
+  },
+  "qr": {
+    "code":"https://firebasestorage.googleapis.com/v0/b/portfolio-ff6da.appspot.com/o/QR-codes%2Fwhite-english-CV.png?alt=media&token=f279ac29-93cb-4119-b173-d30836c97e60",
+    "link": "https://cdn.me-qr.com/pdf/10971974.pdf"
+  },
+  "go-down": {
+    "desktop-text":"scroll down",
+    "mobile-text":"swipe up"
+  },
+  "arrow-up": {
+    "text":"go to top"
+  },
+  "projects":{
+    "legend": "More projects will be added soon"
+  },
+  "placeholder": {
+    "name":"name",
+    "surname":"surname",
+    "email":"email",
+    "message":"leave a message"
+    },
+    "send": {
+      "text": "send"
+    },
+    "contact":{
+      "text": "feel free to email me at:"
+    }
+  
+}
