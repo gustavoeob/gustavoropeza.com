@@ -45,6 +45,7 @@
       display: flex;
       gap: 15px;
       justify-content: center;
+      animation: fadeInLeft 2.75s;
       .dropdown-toggle.nav-link{
         display: flex;
         align-items: center;
@@ -115,6 +116,7 @@
       display: flex;
       gap: 15px;
       justify-content: center;
+      animation: fadeInRight 2.75s;
       a {
         svg {
           width: 38px;
@@ -306,5 +308,36 @@ button::before {
     border-radius: 3px;
     border: 3px solid transparent;
     width: 120px;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  90%{
+
+    opacity: 0.8;
+    transform: translateX(15%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  90%{
+
+    opacity: 0.8;
+    transform: translateX(-15%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

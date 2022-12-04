@@ -80,13 +80,13 @@
     box-shadow: 5px 5px 1px $white-md;
     text-shadow: 1px 1px 20px #ffffff;
     font-size: $fs-item-dk;
-    animation: fadeInUp 2s ease;
+    animation: fadeInUp 2.75s ease;
 
   }
   .qr-code {
     width: 160px;
     height: 100%;
-    animation: fadeInUp 2s ease;
+    animation: fadeInUp 2.75s ease-out;
 
   }
   .scroll-down-container {
@@ -98,11 +98,11 @@
     margin: 25px auto;
     transition: all 0.5s ease;
     color: #fff;
-    animation: fadeInUp 2s ease;
+    animation: fadeInUp 2.5s ease;
     
     
     .swipe-up-text {
-      animation: fadeInUp 2s ease;
+      animation: fadeInUp 2.5s ease;
       display: none;
     }
     a {
@@ -147,11 +147,16 @@
   }
 }
 @keyframes fadeInUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(100%);
   }
-  to {
+  50%{
+
+    opacity: 0.1;
+    transform: translateY(75%);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
