@@ -20,6 +20,7 @@ const Appbar = () => {
   const [langSelection, setLangSelection] = useState(
     <img
       className="globe-icon"
+      alt="globe language icon"
       src="https://firebasestorage.googleapis.com/v0/b/portfolio-ff6da.appspot.com/o/icons%2Fglobal-icon-white.svg?alt=media&token=d44e313a-d624-49af-b96f-c3495a15f446"
     />
   );
@@ -37,53 +38,54 @@ const Appbar = () => {
                     onClick={() => {
                       i18n.changeLanguage("en");
                       setLangSelection(
-                        <a className="language-container-en">
+                        <button className="language-container-en">
                           EN
                           <img
                             src={EnglishFlag}
                             alt="en"
                             className="language-flag"
                           />
-                        </a>
+                        </button>
                       );
                     }}
                   >
-                    <a className="language-container-en">
+                    <button className="language-container-en">
                       EN
                       <img
                         src={EnglishFlag}
                         alt="en"
                         className="language-flag"
                       />
-                    </a>
+                    </button>
                   </button>
                 </NavDropdown.Item>
+                <hr />
                 <NavDropdown.Item>
                   <button
                     className="changeLangButton"
                     onClick={() => {
                       i18n.changeLanguage("es");
                       setLangSelection(
-                        <a className="language-container-es">
+                        <button className="language-container-es">
                           ES
                           <img
                             src={SpanishFlag}
                             alt="es"
                             className="language-flag"
                           />
-                        </a>
+                        </button>
                       );
                     }}
                   >
                                           
-                        <a className="language-container-es">
+                        <button className="language-container-es">
                           ES
                           <img
                             src={SpanishFlag}
                             alt="es"
                             className="language-flag"
                           />
-                        </a>
+                        </button>
                   </button>
                 </NavDropdown.Item>
               </NavDropdown>

@@ -102,10 +102,11 @@ const Contact = () => {
             <h2>{t("contact.text")}</h2>
             <div className="email-link-container">
               <a
-                href="mailto:gustavoeliasoropezabaez@gmail.com"
+                href="mailto:gustavooropezadev@gmail.com"
                 className="email-link"
               >
-                gustavoelias oropezabaez @gmail.com
+                gustavo oropeza
+                dev @gmail.com
               </a>
             </div>
           </div>
