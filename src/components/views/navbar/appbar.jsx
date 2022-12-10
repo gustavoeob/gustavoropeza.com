@@ -6,13 +6,14 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "./appbar.scss";
 import { Linkedin } from "../../../assets/logo/linkedin";
 import { Github } from "../../../assets/logo/github";
+import  GlobeIcon  from "../../../assets/icons/global-icon.png";
+import  Sun  from "../../../assets/icons/sun.png";
+import  Moon  from "../../../assets/icons/moon.png";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../../context/ThemeContext";
 
 const Appbar = () => {
   const {changeTheme, theme} = useContext(ThemeContext);
-  const LightModeIcon = "https://firebasestorage.googleapis.com/v0/b/portfolio-ff6da.appspot.com/o/icons%2Fsun.svg?alt=media&token=db9e269d-d169-46ab-bc07-6a61b89b02a7"
-  const DarkModeIcon = "https://firebasestorage.googleapis.com/v0/b/portfolio-ff6da.appspot.com/o/icons%2Fmoon.svg?alt=media&token=0c998bbd-0681-4cfb-80da-6a2cc0374c37"
   const EnglishFlag = "https://cdn-icons-png.flaticon.com/512/299/299688.png";
   const SpanishFlag = "https://cdn-icons-png.flaticon.com/512/299/299820.png";
 
@@ -20,8 +21,8 @@ const Appbar = () => {
   const [langSelection, setLangSelection] = useState(
     <img
       className="globe-icon"
-      alt="globe language icon"
-      src="https://firebasestorage.googleapis.com/v0/b/portfolio-ff6da.appspot.com/o/icons%2Fglobal-icon-white.svg?alt=media&token=d44e313a-d624-49af-b96f-c3495a15f446"
+      alt="globe language icon" 
+      src={GlobeIcon}
     />
   );
   return (
@@ -91,8 +92,8 @@ const Appbar = () => {
               </NavDropdown>
               <button onClick={changeTheme}>
                 <img
-                  src={ theme === "light" ? DarkModeIcon 
-                : LightModeIcon }
+                  src={ theme === "light" ? Moon 
+                : Sun }
                   alt="light mode sun icon"
                   className={`${theme}-icon`}
                 />

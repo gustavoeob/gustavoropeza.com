@@ -50,9 +50,12 @@
         display: flex;
         align-items: center;
         gap: 2px;
+        &::after{
+          color: #fff
+        }
       }
       .globe-icon{
-        width:24px;
+        width:30px;
       }
       .changeLangButton{
         width:100%;
@@ -98,14 +101,11 @@
       .light-icon {
         width: 28px;
         transition: all 0.5s ease;
-        animation:lightTransition 0.275s all;
       }
       .dark-icon {
-        width: 28px;
+        width: 26px;
         position: relative;
-        left: -4px;
         transition: all 0.5s ease;
-        animation:darkTransition 0.275s all;
       }
 
     }
@@ -149,7 +149,7 @@ button {
   outline: none;
   border-radius: 3px;
   border: 3px solid transparent;
-  width: 85px;
+  width: 100px;
 }
 button:active {
   transform: translateY(3px);
@@ -186,8 +186,8 @@ button::before {
   content: "";
   position: absolute;
   top: 62px;
-  left: -8px;
-  width: 120px;
+  left: -9px;
+  width: 125px;
   height: 45px;
   background-color: $text-color;
   border-color: transparent;
@@ -200,7 +200,7 @@ button::before {
 .navlink:hover::after {
   opacity: 1;
   transform-origin: 50px 150px;
-  transform: scale(1) translate(-10px, -70px);
+  transform: scale(1) translate(-7.5px, -70px);
 }
 .language-container{
   display: flex;
