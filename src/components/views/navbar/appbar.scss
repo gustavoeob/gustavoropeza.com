@@ -112,13 +112,13 @@
     .appbar-container-two {
       width: 420px;
       height: 58px;
-      background-color: $white-md;
+      background-color: #c8d7ef;
       border-radius: 24px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      z-index: 1000;
       navlink-button {
-        
         a:hover {
           color: #fff;
         }
